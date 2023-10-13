@@ -12,21 +12,34 @@ test-driven development.
 
 ## Instructions
 
-The Romans demonstrated remarkable ingenuity, leaving a lasting legacy with
-many innovations. However, one numerical concept they never grasped was the
-concept of zero. This absence posed a unique challenge when chronicling their
-historical feats, yet their numeral system, which employed letters like I, V,
-X, L, C, D, and M, endures in modern usage.
+Roman numerals are a numeral system that was used by ancient Rome. Numbers in 
+this system use letters from the Latin alphabet. Currently, it uses seven symbols:
+
+| Symbol | Value |
+|:-------|-------|
+| I      | 1     |
+| V      | 5     |
+| X      | 10    |
+| L      | 50    |
+| C      | 100   |
+| D      | 500   |
+| M      | 1000  |
+
+Instead of writing the same letter four times, a rule for subtraction is used:
+the letter is written once, then the next largest Roman numeral is written.
+For example, 4 is not written as IIII, but instead as IV, because IV is V (5)
+minus I (1).
+
+In general, the values for 5, 50, and 500 are not subtracted.
 
 ### Exercise 1
 
 The task at hand entails crafting a function `to_roman(number: int) -> str` to
 convert regular Arabic numbers into Roman numerals, such as:
 
-* 1 --> I
-* 10 --> X
-* 9 --> IX
-* 7 --> VII
+* 4 → IV
+* 7 → VII
+* 9 → IX
 
 The lowest number you can write in Roman Numerals is number I (1). And the
 largest numeral is MMMCMXCIX (3999).
@@ -45,7 +58,7 @@ their corresponding Arabic digits.
   design of your algorithm.
 * Consider whether it's more beneficial to devise an algorithm before embarking
   on TDD, especially if you don't already know one.
-* If you do knows an algorithm, evaluate if it can be implemented using strict
+* If you do know an algorithm, evaluate if it can be implemented using strict
   TDD principles.
 
 ## Usage
